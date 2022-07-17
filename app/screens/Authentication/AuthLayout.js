@@ -1,3 +1,4 @@
+import { Poppins_400Regular } from '@expo-google-fonts/poppins';
 import React from 'react';
 import { View, Text, Image } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
@@ -40,8 +41,7 @@ function AuthLayout({ title, subtitle, titleContainer, children }) {
                 >
                     <Text style={{
                         textAlign: 'center',
-                        fontWeight: 'bold',
-                        fontSize: 25
+                        ...FONTS.h2
                     }}>
                         {title}
                     </Text>
@@ -49,8 +49,7 @@ function AuthLayout({ title, subtitle, titleContainer, children }) {
                         textAlign: 'center',
                         color: COLORS.darkGray,
                         marginTop: SIZES.base,
-                        fontSize: 18,
-                        fontWeight: '400'
+                        ...FONTS.body3
                     }}>
                         {subtitle}
                     </Text>
