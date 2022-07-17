@@ -23,7 +23,6 @@ import {
   Poppins_900Black_Italic,
 } from '@expo-google-fonts/poppins';
 
-import Header from './app/components/Header';
 // import AuthLayout from './app/screens/Authentication/AuthLayout';
 import SignIn from './app/screens/Authentication/SignIn';
 
