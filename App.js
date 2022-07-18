@@ -25,6 +25,7 @@ import {
 
 // import AuthLayout from './app/screens/Authentication/AuthLayout';
 import SignIn from './app/screens/Authentication/SignIn';
+import OnBoarding from './app/screens/OnBoarding';
 
 function App(props) {
   let [fontsloaded] = useFonts({
@@ -54,7 +55,8 @@ function App(props) {
       <View style={{
         flex:1
       }}>
-        <SignIn />
+        {/* <SignIn /> */}
+        <OnBoarding />
       </View>
     );
   }
