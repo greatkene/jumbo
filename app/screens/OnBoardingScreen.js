@@ -10,10 +10,10 @@ const textPosition = Platform.OS === 'ios' ? 500 : 450 ;
 
 
 
-function OnBoarding(props) {
+function OnBoardingScreen({navigation}) {
     return (
            <View>
-               <StatusBarPlaceHolder />
+               {/* <StatusBarPlaceHolder /> */}
                 <ImageBackground
                 // blurRadius={3}
                 style={styles.background}
@@ -35,7 +35,7 @@ function OnBoarding(props) {
                             }}>Enjoy amazing deliveries of fresh veggies</Text>
                         </View>
                         <View style={styles.buttonContainer}>
-                            <AppButton title="Get Started"  onPress={() => console.log('Tapped')} />
+                            <AppButton title="Get Started"  onPress={() => navigation.navigate("Login")} />
                             {/* <AppButton title="Register" color='primary' style={{
                                 backgroundColor: COLORS.white2,
                                 marginTop: -7
@@ -75,4 +75,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default OnBoarding;
+export default OnBoardingScreen;

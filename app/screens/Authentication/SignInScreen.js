@@ -14,14 +14,15 @@ import AppTextInput from '../../components/forms/AppTextInput';
 import AppPasswordInput from '../../components/forms/AppPasswordInput';
 import AppButton from '../../components/AppButton';
 
-function SignIn(props) {
+function SignInScreen({navigation}) {
     const [email, setEmail] = React.useState("")
     const [password, setPassword] = React.useState("")
     const [emailError, setEmailError] = React.useState("")
 
     return (
-        <ScrollView>
-            <View style={{flex:1}}>
+        
+           <ScrollView backgroundColor={COLORS.white}>
+                <View style={{flex:1}}>
             <AuthLayout 
             title="Log In Now"
             subtitle="Please login to continue using our app"
@@ -74,7 +75,7 @@ function SignIn(props) {
                             color: COLORS.darkGray,
                             ...FONTS.body3
                         }}> Don't have an account? </Text>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate("Register")}>
                             <Text style={{
                                 ...FONTS.h3,
                                 color: COLORS.primary
@@ -87,7 +88,8 @@ function SignIn(props) {
                 </View>
             </AuthLayout>
         </View>
-        </ScrollView>
+           </ScrollView>
+    
     );
 }
 
@@ -95,4 +97,4 @@ const styles = StyleSheet.create({
    
 })
 
-export default SignIn;
+export default SignInScreen;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native'
 
+
 import {
   useFonts,
   Poppins_100Thin,
@@ -22,10 +23,10 @@ import {
   Poppins_900Black,
   Poppins_900Black_Italic,
 } from '@expo-google-fonts/poppins';
+import { Router } from './app/routes/Router';
+import StatusBarPlaceHolder from './app/components/StatusBarPlaceHolder';
 
-// import AuthLayout from './app/screens/Authentication/AuthLayout';
-import SignIn from './app/screens/Authentication/SignIn';
-import OnBoarding from './app/screens/OnBoarding';
+
 
 function App(props) {
   let [fontsloaded] = useFonts({
@@ -55,8 +56,8 @@ function App(props) {
       <View style={{
         flex:1
       }}>
-        {/* <SignIn /> */}
-        <OnBoarding />
+        <StatusBarPlaceHolder />
+        <Router />
       </View>
     );
   }
