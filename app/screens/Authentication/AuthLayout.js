@@ -1,4 +1,3 @@
-import { Poppins_400Regular } from '@expo-google-fonts/poppins';
 import React from 'react';
 import { View, Text, Image } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
@@ -9,7 +8,7 @@ function AuthLayout({ title, subtitle, titleContainer, children }) {
     return (
         <View style={{
             flex:1,
-            paddingVertical: 80,
+            paddingVertical: 50,
             backgroundColor: COLORS.white
         }}>
             <KeyboardAwareScrollView

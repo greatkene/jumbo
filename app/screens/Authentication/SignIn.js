@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { 
     View,
     Text,
     TouchableOpacity,
-    Image
+    Image,
+    StyleSheet,
+    ScrollView
 } from 'react-native'
+
 import AuthLayout  from './AuthLayout';
 import {icons, FONTS, SIZES, COLORS } from "../../config"
-import {FormInput} from '../../components';
+import AppTextInput from '../../components/forms/AppTextInput';
+import AppPasswordInput from '../../components/forms/AppPasswordInput';
+import AppButton from '../../components/AppButton';
 
 function SignIn(props) {
     const [email, setEmail] = React.useState("")
@@ -15,7 +20,8 @@ function SignIn(props) {
     const [emailError, setEmailError] = React.useState("")
 
     return (
-        <View style={{flex:1}}>
+        <ScrollView>
+            <View style={{flex:1}}>
             <AuthLayout 
             title="Log In Now"
             subtitle="Please login to continue using our app"
@@ -25,26 +31,68 @@ function SignIn(props) {
                     marginTop: SIZES.padding * 2
                 }}>
                     {/* Form Input */}
-                    <FormInput 
-                       placeholder="Email"
+                    <AppTextInput 
+                        placeholder="Email"
                         keyBoardType="email-address"
                         autoCompleteType="email"
                         onChange={(value) => {
                             // Validate email
-                            setEmail(value)
+                            setPassword(value)
                         }}
                         errorMsg={emailError}
                     />
-
+                    {/* Password Input */}
+                    <AppPasswordInput 
+                        placeholder="Password"
+                        secureTextEntry={true}
+                    />
+            
                     {/* Forgot Password */}
+
+                    <TouchableOpacity>
+                        <Text
+                            style={{
+                                alignSelf: 'flex-end',
+                                ...FONTS.body4
+                            }}
+                        > Forgot Password? </Text>
+                    </TouchableOpacity>
 
                     {/* SignIn */}
 
+                    <AppButton 
+                        title="Log In"
+                    />
+
                     {/* SignUp */}
+                    <View style={{
+                        flexDirection: 'row',
+                        marginTop: -10 ,
+                        justifyContent: 'center'
+                    }}>
+                        <Text style={{
+                            color: COLORS.darkGray,
+                            ...FONTS.body3
+                        }}> Don't have an account? </Text>
+                        <TouchableOpacity>
+                            <Text style={{
+                                ...FONTS.h3,
+                                color: COLORS.primary
+                            }}>SignUp</Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    {/* Social Logins */}
+                    
                 </View>
             </AuthLayout>
         </View>
+        </ScrollView>
     );
 }
+
+const styles = StyleSheet.create({
+   
+})
 
 export default SignIn;
