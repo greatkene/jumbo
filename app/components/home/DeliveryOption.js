@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
-import {Icon} from 'react-native-elements'
 import { COLORS, FONTS, SIZES } from '../../config';
 
 function DeliveryOption(props) {
@@ -8,16 +7,34 @@ function DeliveryOption(props) {
 
     return (
         <View style={styles.deliveryContainer}>
-            <TouchableOpacity>
-                <View style={{...styles.btnContainer,backgroundColor: delivery ? COLORS.primary : COLORS.darkGray}}>
-                    <Icon name='truck-delivery' type='material-community' color={COLORS.white} style={{paddingRight: -5}} />
-                    <Text style={styles.deliveryText}>Delivery</Text>
+            <TouchableOpacity
+                onPress={() => {
+                    setDelivery(true)
+                }}
+            >
+                <View style={{...styles.btnContainer,backgroundColor: delivery ? COLORS.primary : COLORS.gray3}}>
+                    <Text style={{
+                            ...styles.deliveryText, 
+                            color: delivery ? COLORS.white : COLORS.primary
+                    }}>DELIVERY</Text>
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity>
-                <View style={{...styles.btnContainer,backgroundColor: delivery ? COLORS.primary : COLORS.darkGray}}>
-                    <Icon name='map-marker' type='material-community' color={COLORS.white} style={{paddingRight: -5}} />
-                    <Text style={styles.deliveryText}>Pickup</Text>
+            <TouchableOpacity
+                onPress={() => {
+                    setDelivery(false)
+                }}
+            >
+                <View 
+                    style={{
+                        ...styles.btnContainer,
+                        backgroundColor: delivery ? COLORS.gray3 : COLORS.primary,
+                    }}
+                >
+                    <Text 
+                        style={{
+                            ...styles.deliveryText, 
+                            color: delivery ? COLORS.primary : COLORS.white
+                    }}>PICKUP</Text>
                 </View>
             </TouchableOpacity>
         </View>
@@ -32,6 +49,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginVertical: 15,
         flexDirection: 'row',
+        justifyContent: 'space-evenly'
+    },
+    btnContainerTrue:{
+        borderWidth:2,
+        backgroundColor: COLORS.white,
+        borderColor: COLORS.primary
     },
     deliveryContainer: {
         flexDirection: 'row',
@@ -40,7 +63,7 @@ const styles = StyleSheet.create({
     },
     deliveryText: {
         color: COLORS.white,
-        ...FONTS.body3
+        ...FONTS.body4
     },
 })
 export default DeliveryOption;
