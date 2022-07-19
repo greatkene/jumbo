@@ -9,12 +9,10 @@ function StatusBarPlaceHolder(props) {
     return (
         <View style={{
             width: "100%",
-            height: STATUS_BAR_HEIGHT,
-            backgroundColor: "rgba(0, 90, 0, 0.90)",
-            
+            height: STATUS_BAR_HEIGHT,    
         }}>
             <StatusBar
-                barStyle="light-content"
+                barStyle={Platform.OS === 'ios'  ? "dark-content" : "light-content" }
                 translucent={true}
             />
         </View>

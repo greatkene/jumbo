@@ -50,7 +50,7 @@ function App(props) {
     Poppins_900Black_Italic,
   });
   if(!fontsloaded){
-    return <Text> Loading </Text>
+    return <Text>  </Text>
   } else {
     return (
       <View style={{
