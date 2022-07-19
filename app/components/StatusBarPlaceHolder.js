@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, StatusBar, View, Platform } from 'react-native'
 
-const STATUS_BAR_HEIGHT = Platform.OS === 'ios' ? 0 : StatusBar.currentHeight;
+const STATUS_BAR_HEIGHT = Platform.OS === 'ios' ? 35 : StatusBar.currentHeight;
 
 
 
@@ -10,7 +10,8 @@ function StatusBarPlaceHolder(props) {
         <View style={{
             width: "100%",
             height: STATUS_BAR_HEIGHT,
-            backgroundColor: "#fff"
+            backgroundColor: "rgba(0, 90, 0, 0.90)",
+            
         }}>
             <StatusBar
                 barStyle="light-content"

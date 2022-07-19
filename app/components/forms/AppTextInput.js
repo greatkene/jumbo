@@ -49,13 +49,13 @@ function AppTextInput({
 const styles = StyleSheet.create({
     textInput1: {
         borderWidth: 1,
-        // marginHorizontal: -5,
         borderRadius: 12,
         marginBottom: 20,
         borderColor: COLORS.gray,
         height: 50,
         paddingLeft: 30,
         ...FONTS.body3,
+        marginTop: -20
     },
     
 })
