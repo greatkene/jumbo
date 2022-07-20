@@ -15,11 +15,13 @@ function Category(props) {
                     keyExtractor={(item) => item.id}
                     extraData={indexCheck}
                     renderItem={({item, index}) => (
-                        <Pressable>
+                        <Pressable 
+                            onPress={() => { setIndexCheck(item.id )}}
+                        >
                             <View style={indexCheck === item.id ? {...styles.categoryContainer} : {...styles.categoryContainerSelected}}>
                                 <View style={styles.categoryDetails}>        
                                     <Image style={{width:50, height: 50, marginTop:5}} source={item.icon} />
-                                    <Text style={{color:COLORS.white, ...FONTS.h4}}>{item.name}</Text>
+                                    <Text style={indexCheck === item.id ? {color:COLORS.white, ...FONTS.h4} : {color:COLORS.black, ...FONTS.h4}}>{item.name}</Text>
                                 </View>
                             </View>
                         </Pressable>
@@ -37,8 +39,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: 140,
         height: 55,
-        marginHorizontal: 5,
-        marginVertical: 10
+        marginHorizontal: 3,
+        marginVertical: 10,
     },
     categoryContainerSelected: {
         backgroundColor: COLORS.gray3,
@@ -49,6 +51,7 @@ const styles = StyleSheet.create({
         height: 55,
         marginHorizontal: 5,
         marginVertical: 10,
+        
     },
     categoryDetails: {
         flexDirection: 'row',
