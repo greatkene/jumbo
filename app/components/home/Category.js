@@ -9,6 +9,7 @@ function Category(props) {
             {/* <Text style={{...FONTS.h3}}>Categories</Text> */}
             <View>
                 <FlatList 
+                    contentContainerStyle={{paddingLeft: SIZES.padding}}
                     data={dummyData.categories}
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
         borderRadius: SIZES.radius,
         justifyContent: 'center',
         alignItems: 'center',
-        width: 140,
+        width: 160,
         height: 55,
         marginHorizontal: 3,
         marginVertical: 10,
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
         borderRadius: SIZES.radius,
         justifyContent: 'center',
         alignItems: 'center',
-        width: 140,
+        width: 160,
         height: 55,
         marginHorizontal: 5,
         marginVertical: 10,
@@ -58,8 +59,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center', 
     },
-    container: {
-        paddingLeft: SIZES.padding,
+    container: { 
         paddingVertical: SIZES.padding
     }
 })
