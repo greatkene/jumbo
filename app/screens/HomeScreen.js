@@ -5,6 +5,7 @@ import Category from '../components/home/Category';
 import DeliveryOption from '../components/home/DeliveryOption';
 import FreeDelivery from '../components/home/FreeDelivery';
 import Header from '../components/home/Header';
+import RestaurantNearYou from '../components/home/RestaurantNearYou';
 
 function HomeScreen(props) {
     return (
@@ -18,6 +19,7 @@ function HomeScreen(props) {
                 <Address />
                 <Category />
                 <FreeDelivery />
+                <RestaurantNearYou />
             </ScrollView>
         </View>
     );

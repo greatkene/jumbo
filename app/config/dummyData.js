@@ -21,6 +21,7 @@ const freeDelivery = [
         id: 0,
         restaurantName: "Shop Veggies",
         deliveryTime: "20-30mins",
+        deliveryPrice: "Free",
         discount: '-20%', 
         averageReview: '4.5',
         image: require("../assets/freeDelivery/shopveggies.jpg"),
@@ -62,6 +63,7 @@ const freeDelivery = [
         id: 1,
         restaurantName: "Burger Points",
         deliveryTime: "30-40mins",
+        deliveryPrice: "Free",
         discount: '-20%', 
         averageReview: '4.5',
         image: require("../assets/freeDelivery/burgerpoints.jpg"),
@@ -88,6 +90,7 @@ const freeDelivery = [
         id: 2,
         restaurantName: "Pasta Plug",
         deliveryTime: "35-45mins",
+        deliveryPrice: "Free",
         discount: '0%', 
         averageReview: '4.9',
         image: require("../assets/freeDelivery/pastaplug.jpg"),
@@ -114,6 +117,7 @@ const freeDelivery = [
         id: 3,
         restaurantName: "Hillyspizza",
         deliveryTime: "80-95mins",
+        deliveryPrice: "Free",
         discount: '0%', 
         averageReview: '4.9',
         image: require("../assets/freeDelivery/hillyspizza.jpg"),
@@ -140,6 +144,7 @@ const freeDelivery = [
         id: 4,
         restaurantName: "Suya College",
         deliveryTime: "20-35mins",
+        deliveryPrice: "Free",
         discount: '0%', 
         averageReview: '4.2',
         image: require("../assets/freeDelivery/suya.jpg"),
@@ -166,6 +171,7 @@ const freeDelivery = [
         id: 5,
         restaurantName: "Wrap HQ",
         deliveryTime: "20-35mins",
+        deliveryPrice: "Free",
         discount: '-10%', 
         averageReview: '5.0',
         image: require("../assets/freeDelivery/wrapstar.jpg"),
@@ -189,9 +195,10 @@ const freeDelivery = [
         ]
     },
     {
-        id: 2,
+        id: 6,
         restaurantName: "Fruits Always",
         deliveryTime: "10-15mins",
+        deliveryPrice: "Free",
         discount: '0%', 
         averageReview: '4.3',
         image: require("../assets/freeDelivery/fruitsalad.jpg"),
@@ -217,5 +224,6 @@ const freeDelivery = [
 ]
 
 export default {
-    categories
+    categories,
+    freeDelivery
 }

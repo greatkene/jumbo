@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
 import { Icon } from 'react-native-elements';
 
-import { COLORS, FONTS, SIZES, dummyData } from '../../config';
+import { COLORS, FONTS, SIZES} from '../../config';
 
 function HomeCard({
     onPressHomeCard,
@@ -11,7 +11,8 @@ function HomeCard({
     averageReview,
     images,
     screenWidth,
-    deliveryTime
+    deliveryTime,
+    deliveryPrice,
 }) {
     return (
        <TouchableOpacity>
@@ -20,24 +21,26 @@ function HomeCard({
                     style={{...styles.image, width: screenWidth}}
                     source={images}
                 />
-           </View>
-           <View style={styles.cardInfo}>
-               <View>
-                    <Text style={styles.restaurantName}>{restaurantName}</Text>
-               </View>
-               <View style={styles.review}>
-                    <Icon
-                        type='material-community'
-                        name='star'
-                        size={24}
-                    />
-                    <Text style={{...FONTS.h5}}>{averageReview}</Text>
-               </View>
+           
+                <View style={styles.cardInfo}>
+                    <View>
+                            <Text style={styles.restaurantName}>{restaurantName}</Text>
+                    </View>
+                    <View style={styles.review}>
+                            <Icon
+                                type='material-community'
+                                name='star'
+                                size={20}
+                            />
+                            <Text style={{...FONTS.h4, marginTop: 5, marginLeft: 4}}>{averageReview}</Text>
+                    </View>
+                </View>
+                <Text style={{...FONTS.h3, textTransform: 'uppercase', marginLeft: 10, marginTop: -10}}>{deliveryPrice}</Text>
            </View>
 
         {/* Time */}
         <View style={styles.deliveryTime}>
-            <Text style={{...FONTS.body4}}>{deliveryTime}</Text>
+            <Text style={{...FONTS.body5}}>{deliveryTime}</Text>
         </View>
 
        </TouchableOpacity>
@@ -45,10 +48,14 @@ function HomeCard({
 }
 const styles = StyleSheet.create({
     cardView: {
-        marginHorizontal: SIZES.padding,
         borderRadius: SIZES.radius,
-        borderWidth: 1,
         borderColor: COLORS.primary,
+        marginTop: SIZES.padding,
+        // borderWidth: 1,
+        borderColor: COLORS.gray2,
+        height: 220,
+        marginRight: 25
+
     },
     image: {
         height: 150,
@@ -64,7 +71,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        flex: 1
+        paddingHorizontal: 10,
+        paddingVertical: 6
     },
     review: {
         flexDirection: 'row',
@@ -73,10 +81,10 @@ const styles = StyleSheet.create({
     },
     deliveryTime: {
         position: 'absolute',
-        top: 0,
-        right: 10,
+        top: 35,
+        right: 40,
         backgroundColor: COLORS.white,
-        padding: 2,
+        padding: 6,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: SIZES.radius
