@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import Address from '../components/home/Address';
+import Category from '../components/home/Category';
 import DeliveryOption from '../components/home/DeliveryOption';
 import Header from '../components/home/Header';
 
@@ -14,6 +15,7 @@ function HomeScreen(props) {
             >
                 <DeliveryOption />
                 <Address />
+                <Category />
             </ScrollView>
         </View>
     );
