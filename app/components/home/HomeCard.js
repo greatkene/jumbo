@@ -53,14 +53,13 @@ const styles = StyleSheet.create({
         marginTop: SIZES.padding,
         // borderWidth: 1,
         borderColor: COLORS.gray2,
-        height: 220,
+        height: 180,
         marginRight: 25
 
     },
     image: {
-        height: 150,
-        borderTopLeftRadius: SIZES.radius,
-        borderTopRightRadius: SIZES.radius 
+        height: 130,
+        borderRadius: SIZES.radius
     },
     restaurantName: {
         ...FONTS.h4,

@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import Address from '../components/home/Address';
 import Category from '../components/home/Category';
 import DeliveryOption from '../components/home/DeliveryOption';
+import DiscountsAvailable from '../components/home/DiscountsAvailable';
 import FreeDelivery from '../components/home/FreeDelivery';
 import Header from '../components/home/Header';
 import RestaurantNearYou from '../components/home/RestaurantNearYou';
@@ -19,6 +20,7 @@ function HomeScreen(props) {
                 <Address />
                 <Category />
                 <FreeDelivery />
+                <DiscountsAvailable />
                 <RestaurantNearYou />
             </ScrollView>
         </View>

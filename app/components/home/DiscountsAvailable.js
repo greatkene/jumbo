@@ -6,7 +6,7 @@ import HomeCard from './HomeCard';
 const SCREEN_WIDTH = Dimensions.get('window').width
 
 
-function RestaurantNearYou() {
+function DiscountsAvailable() {
     return (
         <View>
             <View 
@@ -47,4 +47,4 @@ function RestaurantNearYou() {
     );
 }
 
-export default RestaurantNearYou;
+export default DiscountsAvailable;
