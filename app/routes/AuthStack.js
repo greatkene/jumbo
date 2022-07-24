@@ -3,7 +3,8 @@ import {createStackNavigator, transitionPresets} from '@react-navigation/stack'
 import SignInScreen from '../screens/Authentication/SignInScreen';
 import RegisterScreen from '../screens/Authentication/RegisterScreen';
 import OnBoardingScreen from '../screens/OnBoardingScreen';
-import HomeScreen from '../screens/HomeScreen';
+// import HomeScreen from '../screens/HomeScreen';
+import BottomTab from './BottomTab';
 
 const Stack = createStackNavigator();
 
@@ -14,7 +15,7 @@ export default function AuthStack(props) {
             <Stack.Screen name="OnBoarding" component={OnBoardingScreen} />
             <Stack.Screen name="Login" component={SignInScreen} />
             <Stack.Screen name="Register" component={RegisterScreen} />
-            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Tab" component={BottomTab} />
         </Stack.Navigator>
     );
 }

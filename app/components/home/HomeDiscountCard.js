@@ -4,7 +4,7 @@ import { Icon } from 'react-native-elements';
 
 import { COLORS, FONTS, SIZES} from '../../config';
 
-function HomeCard({
+function HomeDiscountCard({
     onPressHomeCard,
     restaurantName,
     discountPercent,
@@ -43,6 +43,10 @@ function HomeCard({
             <Text style={{...FONTS.body5}}>{deliveryTime}</Text>
         </View>
 
+        <View style={styles.discountPercent}>
+            <Text style={{...FONTS.body5, color: COLORS.red}}>{discountPercent}</Text>
+        </View>
+
        </TouchableOpacity>
     );
 }
@@ -54,13 +58,12 @@ const styles = StyleSheet.create({
         // borderWidth: 1,
         borderColor: COLORS.gray2,
         height: 180,
-        marginRight: 25,
-        marginBottom: 30
+        marginRight: 25
 
     },
     image: {
-        height: 150,
-        borderRadius: SIZES.radius,
+        height: 130,
+        borderRadius: SIZES.radius
     },
     restaurantName: {
         ...FONTS.h4,
@@ -89,6 +92,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderRadius: SIZES.radius
     },
+    discountPercent: {
+        position: 'absolute',
+        bottom: 60,
+        left: 10,
+        backgroundColor: COLORS.white,
+        padding: 6,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: SIZES.radius
+    }
 })
 
-export default HomeCard;
+export default HomeDiscountCard;

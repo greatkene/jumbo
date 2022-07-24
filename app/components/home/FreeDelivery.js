@@ -7,7 +7,6 @@ const SCREEN_WIDTH = Dimensions.get('window').width
 
 
 function FreeDelivery() {
-    console.log()
     return (
         <View>
             <View 
@@ -16,9 +15,9 @@ function FreeDelivery() {
                     justifyContent: 'space-between',
                     paddingHorizontal: SIZES.padding
                 }}>
-                <Text style={{...FONTS.h4}}>Free Deliveries</Text>
+                <Text style={{...FONTS.h3}}>Free Deliveries</Text>
                 <TouchableOpacity>
-                    <Text style={{...FONTS.h4, color: COLORS.primary}}>See All</Text>
+                    <Text style={{...FONTS.h3, color: COLORS.primary}}>See All</Text>
                 </TouchableOpacity>
             </View>
             <FlatList 

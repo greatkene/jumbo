@@ -7,31 +7,24 @@ const SCREEN_WIDTH = Dimensions.get('window').width
 
 
 function RestaurantNearYou() {
+    const freeDelivery = dummyData.freeDelivery;
     return (
         <View>
             <View 
                 style={{
-                    flexDirection: 'row', 
-                    justifyContent: 'space-between',
                     paddingHorizontal: SIZES.padding,
                     paddingTop: 50
                 }}>
-                <Text style={{...FONTS.h4}}>Discounts Available</Text>
-                <TouchableOpacity>
-                    <Text style={{...FONTS.h4, color: COLORS.primary}}>See All</Text>
-                </TouchableOpacity>
+                <Text style={{...FONTS.h2}}>All Restaurants</Text>
             </View>
-            <FlatList 
-                horizontal={true}
-                contentContainerStyle={{paddingHorizontal:20,}}
-                data = {dummyData.freeDelivery}
-                showsHorizontalScrollIndicator={false}
-                keyExtractor={(item) => item.id}
-                renderItem= {({item}) => {
-                    return(
-                        <View>
+
+            <View style={{width: SCREEN_WIDTH, paddingTop:10}}>
+                {
+                    freeDelivery.map(item => {
+                        return (
+                            <View key={item.id} style={{paddingBottom: 20, paddingHorizontal: SIZES.padding}}>
                             <HomeCard 
-                                screenWidth= {SCREEN_WIDTH * 0.7}
+                                screenWidth= {SCREEN_WIDTH * 0.886}
                                 images={item.image}
                                 restaurantName={item.restaurantName}
                                 averageReview={item.averageReview}
@@ -40,9 +33,11 @@ function RestaurantNearYou() {
                                 
                             />
                         </View>
-                    )
-                }}
-            />
+                        )
+                    })
+                }
+            </View>
+           
         </View>
     );
 }
