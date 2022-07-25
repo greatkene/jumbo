@@ -7,7 +7,7 @@ import HomeScreen from '../screens/HomeScreen';
 import SearchScreen from '../screens/SearchScreen';
 import MyOrdersScreen from '../screens/MyOrdersScreen';
 import MyAccountScreen from '../screens/MyAccountScreen'
-import {COLORS}   from '../config';
+import {COLORS, FONTS}   from '../config';
 
 const BottomTabs = createBottomTabNavigator();
 

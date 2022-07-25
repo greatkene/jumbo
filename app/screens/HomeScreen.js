@@ -6,6 +6,7 @@ import DeliveryOption from '../components/home/DeliveryOption';
 import DiscountsAvailable from '../components/home/DiscountsAvailable';
 import FreeDelivery from '../components/home/FreeDelivery';
 import Header from '../components/home/Header';
+import MapButton from '../components/home/MapButton';
 import RestaurantNearYou from '../components/home/RestaurantNearYou';
 
 function HomeScreen(props) {
@@ -23,6 +24,7 @@ function HomeScreen(props) {
                 <DiscountsAvailable />
                 <RestaurantNearYou />
             </ScrollView>
+            <MapButton />
         </View>
     );
 }
