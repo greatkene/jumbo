@@ -1,12 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
+
 
 // Context
 import { useGlobalContext } from '../../context';
 import { COLORS, FONTS, SIZES } from '../../config';
 
-function DeliveryOption(props) {
-     const { delivery, setDelivery } = useGlobalContext()
+function DeliveryOption(props) { 
+    const navigation = useNavigation();
+    const { delivery, setDelivery } = useGlobalContext()
     return (
         <View style={styles.deliveryContainer}>
             <TouchableOpacity
@@ -24,6 +27,7 @@ function DeliveryOption(props) {
             <TouchableOpacity
                 onPress={() => {
                     setDelivery(false)
+                    navigation.navigate('RestaurantMapScreen')
                 }}
             >
                 <View 

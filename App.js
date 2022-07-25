@@ -4,6 +4,8 @@ import { View, Text, StyleSheet } from 'react-native'
 import { AppProvider } from './app/context';
 
 
+
+
 import {
   useFonts,
   Poppins_100Thin,
@@ -31,6 +33,7 @@ import StatusBarPlaceHolder from './app/components/StatusBarPlaceHolder';
 
 
 function App(props) {
+
   let [fontsloaded] = useFonts({
     Poppins_100Thin,
     Poppins_100Thin_Italic,
