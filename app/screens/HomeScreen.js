@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import Address from '../components/home/Address';
 import Category from '../components/home/Category';
@@ -8,8 +8,13 @@ import FreeDelivery from '../components/home/FreeDelivery';
 import Header from '../components/home/Header';
 import MapButton from '../components/home/MapButton';
 import RestaurantNearYou from '../components/home/RestaurantNearYou';
+// context
+import { useGlobalContext } from '../context';
 
 function HomeScreen(props) {
+    const { delivery, setDelivery } = useGlobalContext()
+
+    
     return (
         <View style={styles.container}>
             <Header />
@@ -17,14 +22,17 @@ function HomeScreen(props) {
                 stickyHeaderIndices={[0]}
                 showsHorizontalScrollIndicator= {false}
             >
-                <DeliveryOption />
+                <DeliveryOption/>
                 <Address />
                 <Category />
                 <FreeDelivery />
                 <DiscountsAvailable />
                 <RestaurantNearYou />
             </ScrollView>
-            <MapButton />
+               {
+                   delivery &&  <MapButton />
+
+               }
         </View>
     );
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native'
+// Context API
+import { AppProvider } from './app/context';
 
 
 import {
@@ -53,12 +55,14 @@ function App(props) {
     return <Text>  </Text>
   } else {
     return (
-      <View style={{
-        flex:1
-      }}>
-        <StatusBarPlaceHolder />
-        <Router />
-      </View>
+      <AppProvider>
+        <View style={{
+          flex:1
+        }}>
+          <StatusBarPlaceHolder />
+          <Router />
+        </View>
+      </AppProvider>
     );
   }
 }

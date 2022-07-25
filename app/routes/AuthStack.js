@@ -5,6 +5,7 @@ import RegisterScreen from '../screens/Authentication/RegisterScreen';
 import OnBoardingScreen from '../screens/OnBoardingScreen';
 // import HomeScreen from '../screens/HomeScreen';
 import BottomTab from './BottomTab';
+import RestaurantMapScreen from '../screens/RestaurantMapScreen';
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,7 @@ export default function AuthStack(props) {
             <Stack.Screen name="Login" component={SignInScreen} />
             <Stack.Screen name="Register" component={RegisterScreen} />
             <Stack.Screen name="Tab" component={BottomTab} />
+            <Stack.Screen name="RestaurantMapScreen" component={RestaurantMapScreen} />
         </Stack.Navigator>
     );
 }

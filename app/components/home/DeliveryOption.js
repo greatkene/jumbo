@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+
+// Context
+import { useGlobalContext } from '../../context';
 import { COLORS, FONTS, SIZES } from '../../config';
 
 function DeliveryOption(props) {
-    const [delivery, setDelivery] = useState(true)
-
+     const { delivery, setDelivery } = useGlobalContext()
     return (
         <View style={styles.deliveryContainer}>
             <TouchableOpacity

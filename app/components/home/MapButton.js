@@ -1,21 +1,28 @@
 import React from 'react';
 import { TouchableOpacity, View, StyleSheet, Text} from 'react-native'
 import { Icon } from 'react-native-elements';
+import { useNavigation } from '@react-navigation/native';
+
 import { COLORS, FONTS } from '../../config'
 
-function MapButton(props) {
+
+function MapButton() {
+    const navigation = useNavigation();
     return (
-        <View style={styles.floatButton}>
-            <TouchableOpacity>
-                <Icon 
-                    name='place'
-                    type='material'
-                    size={32}
-                    color={COLORS.primary}
-                />
-                <Text style={{color: COLORS.gray, ...FONTS.body5}}>Map</Text>
-            </TouchableOpacity>
-        </View>
+        
+            <View style={styles.floatButton}>
+                <TouchableOpacity  onPress={() => navigation.navigate("RestaurantMapScreen")}>
+                    <Icon 
+                        name='place'
+                        type='material'
+                        size={32}
+                        color={COLORS.primary}
+                    />
+                    <Text style={{color: COLORS.gray, ...FONTS.body5}}>Map</Text>
+                </TouchableOpacity>
+            </View>
+                
+         
     );
 }
 
