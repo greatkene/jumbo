@@ -63,7 +63,7 @@ function SignInScreen({navigation}) {
 
                     <AppButton 
                         title="Log In"
-                        onPress={() => navigation.navigate("Tab")}
+                        onPress={() => navigation.navigate("DrawerNavigator")}
                     />
 
                     {/* SignUp */}

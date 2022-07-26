@@ -5,7 +5,7 @@ import { Icon, withBadge } from 'react-native-elements'
 import {icons, FONTS, SIZES, COLORS } from "../../config"
 
 
-function Header(props) {
+function Header({navigation}) {
     const BadgeIcon = withBadge(0)(Icon)
 
     return (
@@ -15,6 +15,9 @@ function Header(props) {
                     type= "material-community"
                     name="menu"
                     size={35}
+                    onPress = {() => {
+                        navigation.toggleDrawer()
+                    }}
                 />
             </View>
             <View style={{marginTop: 5}} >

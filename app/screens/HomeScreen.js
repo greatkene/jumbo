@@ -11,13 +11,13 @@ import RestaurantNearYou from '../components/home/RestaurantNearYou';
 // context
 import { useGlobalContext } from '../context';
 
-function HomeScreen(props) {
+function HomeScreen({navigation}) {
     const { delivery, setDelivery } = useGlobalContext()
 
     
     return (
         <View style={styles.container}>
-            <Header />
+            <Header navigation={navigation} />
             <ScrollView 
                 stickyHeaderIndices={[0]}
                 showsHorizontalScrollIndicator= {false}
