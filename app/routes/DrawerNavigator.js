@@ -36,25 +36,7 @@ function DrawerNavigator(props) {
                     }
                 }}
             />
-             <Drawer.Screen 
-                name='PaymentScreen'
-                component={PaymentScreen}
-                options = {{
-                    headerShown: false,
-                    title: "Payment",
-                    drawerIcon: ({focused, size}) => (
-                        <Icon 
-                            type='material-community'
-                            name='wallet'
-                            color={focused ? COLORS.gray3 : COLORS.gray2 }
-                            size={size}
-                        />
-                    ),
-                    drawerLabelStyle: {
-                        ...FONTS.body3
-                    }
-                }}
-            />
+
             <Drawer.Screen 
                 name='PromotionScreen'
                 component={PromotionScreen}
