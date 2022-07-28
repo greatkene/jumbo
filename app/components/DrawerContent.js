@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native'
-import { Drawer } from 'react-native-paper';
+import { View, Text, StyleSheet, Switch } from 'react-native'
 
 import {
     DrawerContentScrollView,
@@ -57,19 +56,83 @@ function DrawerContent(props) {
                 </View>
                 
                 <DrawerItemList {...props} />
+                <DrawerItem 
+                    label = "Payment"
+                    icon = {({color,size})=>(
+                        <Icon 
+                            type ="material-community"
+                            name = "wallet"
+                            color ={color}
+                            size ={size}
+                        />
+                    )}
+                />
+
                 <DrawerItem
-                    label='Payment'
-                    icon = {({color, size}) => {
+                    label='Promotion'
+                    icon = {({color, size}) => (
                         <Icon
-                            type='material-community'
-                            name='credit-card-outline'
+                            type ="material-community"
+                            name= "tag-heart"
                             color={ color }
                             size={size}
                         />
-                    }}                                                 
+                    )}                                                 
                 />
 
+                <DrawerItem 
+                    label = "Settings"
+                    icon = {({color,size})=>(
+                        <Icon 
+                            type ="material-community"
+                            name = "cog-outline"
+                            color ={color}
+                            size ={size}
+                        />
+                    )}
+                />
+
+                <DrawerItem 
+                    label = "Help"
+                    icon = {({color,size})=>(
+                        <Icon 
+                            type ="material-community"
+                            name = "lifebuoy"
+                            color ={color}
+                            size ={size}
+                        />
+                    )}
+                />
+                
+                
+                <View style={{borderTopWidth: 1, borderTopColor: COLORS.gray2}}>
+                    <Text style={styles.preferences}>Preferences</Text>
+
+                    <View style={styles.switchText}>
+                        <Text style={styles.darkThemeText}>Dark Theme</Text>
+                        <View style ={{ paddingRight:10}}>
+                            <Switch 
+                                trackColor = {{false: "#767577",true : "#81b0ff"}}
+                                thumbColor = "#f4f3f4"
+                            />
+                        </View>
+                    </View>
+
+                </View>
             </DrawerContentScrollView>
+
+            <DrawerItem 
+                    label = "Log Out"
+                    icon = {({color,size})=>(
+                        <Icon 
+                            type ="material-community"
+                            name = "logout"
+                            color ={color}
+                            size ={size}
+                        />
+                    )}
+                />
+
         </View>
     );
 }
@@ -79,6 +142,26 @@ const styles = StyleSheet.create({
         borderWidth: 4,
         borderColor: COLORS.gray3,
         borderRadius: SIZES.radius,
+    },
+    preferences:{
+        fontSize: 16,
+        paddingTop:10,
+        paddingLeft:20,
+        ...FONTS.body3
+    },
+    switchText:{
+        flexDirection:"row",
+        alignItems:"center",
+        justifyContent:"space-between",
+        paddingLeft:20,
+        paddingVertical:5,
+        paddingRight:10
+    },
+    darkThemeText:{
+        color:COLORS.darkGray,
+        paddingTop:10,
+        paddingLeft:0,
+        ...FONTS.body3
     }
 })
 
