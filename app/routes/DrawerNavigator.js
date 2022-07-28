@@ -7,26 +7,30 @@ import { COLORS, FONTS } from '../config';
 import PaymentScreen from '../screens/PaymentScreen';
 import PromotionScreen from '../screens/PromotionScreen';
 import SettingScreen from '../screens/SettingScreen'
+import SupportScreen from '../screens/SupportScreen';
+import DrawerContent from '../components/DrawerContent';
 
 const Drawer = createDrawerNavigator();
 
 function DrawerNavigator(props) {
     return (
-        <Drawer.Navigator>
+        <Drawer.Navigator
+            drawerContent={props => <DrawerContent {...props} />}
+        >
             <Drawer.Screen 
                 name='BottomTab'
                 component={BottomTab}
                 options = {{
                     headerShown: false,
                     title: "Home",
-                    drawerIcon: ({focussed, size}) => {
+                    drawerIcon: ({focused, size}) => (
                         <Icon 
                             type='material-community'
                             name='home'
-                            color={focussed ? COLORS.gray3 : COLORS.gray2 }
+                            color={focused ? COLORS.gray3 : COLORS.gray2 }
                             size={size}
                         />
-                    },
+                    ),
                     drawerLabelStyle: {
                         ...FONTS.body3
                     }
@@ -38,14 +42,14 @@ function DrawerNavigator(props) {
                 options = {{
                     headerShown: false,
                     title: "Payment",
-                    drawerIcon: ({focussed, size}) => {
+                    drawerIcon: ({focused, size}) => (
                         <Icon 
                             type='material-community'
-                            name='home'
-                            color={focussed ? COLORS.gray3 : COLORS.gray2 }
+                            name='wallet'
+                            color={focused ? COLORS.gray3 : COLORS.gray2 }
                             size={size}
                         />
-                    },
+                    ),
                     drawerLabelStyle: {
                         ...FONTS.body3
                     }
@@ -56,15 +60,15 @@ function DrawerNavigator(props) {
                 component={PromotionScreen}
                 options = {{
                     headerShown: false,
-                    title: "Settings",
-                    drawerIcon: ({focussed, size}) => {
+                    title: "Promotions",
+                    drawerIcon: ({focused, size}) => (
                         <Icon 
                             type='material-community'
                             name='home'
-                            color={focussed ? COLORS.gray3 : COLORS.gray2 }
+                            color={focused ? COLORS.gray3 : COLORS.gray2 }
                             size={size}
                         />
-                    },
+                    ),
                     drawerLabelStyle: {
                         ...FONTS.body3
                     }
@@ -75,15 +79,34 @@ function DrawerNavigator(props) {
                 component={SettingScreen}
                 options = {{
                     headerShown: false,
-                    title: "Promotions",
-                    drawerIcon: ({focussed, size}) => {
+                    title: "Settings",
+                    drawerIcon: ({focused, size}) => (
                         <Icon 
-                            type='material-community'
-                            name='home'
-                            color={focussed ? COLORS.gray3 : COLORS.gray2 }
+                            type='feather'
+                            name='settings'
+                            color={focused ? COLORS.gray3 : COLORS.gray2 }
                             size={size}
                         />
-                    },
+                    ),
+                    drawerLabelStyle: {
+                        ...FONTS.body3
+                    }
+                }}
+            />
+            <Drawer.Screen 
+                name='SupportScreen'
+                component={SupportScreen}
+                options = {{
+                    headerShown: false,
+                    title: "Support",
+                    drawerIcon: ({focused, size}) => (
+                        <Icon 
+                            type='material'
+                            name='support-agent'
+                            color={focused ? COLORS.gray3 : COLORS.gray2 }
+                            size={size}
+                        />
+                    ),
                     drawerLabelStyle: {
                         ...FONTS.body3
                     }
