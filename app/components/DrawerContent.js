@@ -14,7 +14,7 @@ import { COLORS, FONTS, SIZES } from '../config';
 
 function DrawerContent(props) {
     return (
-        <View style={{flex:1, flexDirection: 'row'}}>
+        <View style={{flex:1}}>
             <DrawerContentScrollView {...props}>
                 <View style={{backgroundColor: COLORS.primary,}}>
 
