@@ -1,15 +1,30 @@
 import React, { useState, useRef } from 'react';
-import { View, Text, StyleSheet, TouchableWithoutFeedback, Modal, Platform, TextInput } from 'react-native'
+import { 
+    View, 
+    Text, 
+    StyleSheet, 
+    TouchableWithoutFeedback, 
+    Modal, 
+    Platform, 
+    TextInput, 
+    FlatList,
+    TouchableOpacity,
+    Keyboard
+} from 'react-native'
 import { Icon } from 'react-native-elements';
 import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native';
+import {dummyData} from '../../config'
 
 import { COLORS, FONTS, SIZES } from '../../config'
 
 function SearchComponent(props) {
 
+    const navigation  = useNavigation();
+
+    const [data, setData] =  useState([...dummyData.filterData])
     const [modalVisible, setModalVisible] = useState(false)
-    const [textInputFocussed, setTextInputFocussed] = useState(true)
+    const [textInputFocused, setTextInputFocused] = useState(true)
     const textInput = useRef(0)
 
 
@@ -39,13 +54,16 @@ function SearchComponent(props) {
                 <View style={styles.modal}>
                     <View style={styles.view1}>
                         <View style={styles.textInput}>
-                            <Animatable.View>
+                            <Animatable.View
+                                animation = {textInputFocused? "fadeInRight" : "fadeInLeft"}
+                                duration = {400}
+                            >
                                     <Icon 
-                                        name= {textInputFocussed ? 'arrow-back' : 'search'}
+                                        name= {textInputFocused ? 'arrow-back' : 'search'}
                                         onPress = {() => {
-                                            if(textInputFocussed)
+                                            if(textInputFocused)
                                             setModalVisible(false)
-                                            setTextInputFocussed(false)
+                                            setTextInputFocused(true)
                                         }}
                                         style = {styles.icon2}
                                         type = 'material'
@@ -60,7 +78,7 @@ function SearchComponent(props) {
                             />
                              <Animatable.View>
                                     <Icon 
-                                        name= {textInputFocussed ? 'cancel' : null}
+                                        name= {textInputFocused ? 'cancel' : null}
                                         onPress = {() => {
                                             textInput.current.clear()
                                         }}
@@ -71,6 +89,26 @@ function SearchComponent(props) {
                             </Animatable.View>
                         </View>
                     </View>
+
+                    <FlatList
+                        data={data}
+                        renderItem={({ item }) => (
+                        <TouchableOpacity 
+                            onPress = {() =>{
+                            Keyboard.dismiss
+                            navigation.navigate("SearchResultScreen",{item:item.name})
+                            setModalVisible(false)
+                            setTextInputFocused(true)
+                        }}>
+                            <View style={styles.view2}>
+                                <Text style={{color:COLORS.darkGray, ...FONTS.body3 }}>{item.name}</Text>
+                            </View>
+                        </TouchableOpacity>
+                            )}
+                        keyExtractor={item => item.id}
+
+                    />             
+
                 </View>
             </Modal>
         </View>
