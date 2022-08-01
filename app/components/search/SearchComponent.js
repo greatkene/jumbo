@@ -1,12 +1,25 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableWithoutFeedback, Modal } from 'react-native'
+import React, { useState, useRef } from 'react';
+import { View, Text, StyleSheet, TouchableWithoutFeedback, Modal, Platform, TextInput } from 'react-native'
 import { Icon } from 'react-native-elements';
+import * as Animatable from 'react-native-animatable'
+import { useNavigation } from '@react-navigation/native';
+
 import { COLORS, FONTS, SIZES } from '../../config'
 
 function SearchComponent(props) {
+
+    const [modalVisible, setModalVisible] = useState(false)
+    const [textInputFocussed, setTextInputFocussed] = useState(true)
+    const textInput = useRef(0)
+
+
     return (
         <View style={{ alignItems: 'center' }}>
-            <TouchableWithoutFeedback>
+            <TouchableWithoutFeedback
+                onPress={() => {
+                    setModalVisible(true)
+                }}
+            >
                 <View style={styles.searchArea}>
                     <Icon 
                         name='search'
@@ -18,6 +31,48 @@ function SearchComponent(props) {
                     <Text style={{...FONTS.body4}}>What Are You Looking For?</Text>
                 </View>
             </TouchableWithoutFeedback>
+            <Modal
+                animationType='fade'
+                transparent = {false}
+                visible = {modalVisible}
+            >
+                <View style={styles.modal}>
+                    <View style={styles.view1}>
+                        <View style={styles.textInput}>
+                            <Animatable.View>
+                                    <Icon 
+                                        name= {textInputFocussed ? 'arrow-back' : 'search'}
+                                        onPress = {() => {
+                                            if(textInputFocussed)
+                                            setModalVisible(false)
+                                            setTextInputFocussed(false)
+                                        }}
+                                        style = {styles.icon2}
+                                        type = 'material'
+                                        iconStyle={{marginRight: 5}}
+                                    />
+                            </Animatable.View>
+                            <TextInput 
+                                style = {{ width: '90%' }}
+                                placeholder = ""
+                                autoFocus = {false}
+                                ref = {textInput}
+                            />
+                             <Animatable.View>
+                                    <Icon 
+                                        name= {textInputFocussed ? 'cancel' : null}
+                                        onPress = {() => {
+                                            textInput.current.clear()
+                                        }}
+                                        style = {{marginRight: 10}}
+                                        type = 'material'
+                                        iconStyle={{color: COLORS.gray2}}
+                                    />
+                            </Animatable.View>
+                        </View>
+                    </View>
+                </View>
+            </Modal>
         </View>
     );
 }
@@ -34,13 +89,14 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: SIZES.radius,
         marginHorizontal: 0,
-        borderColor: COLORS.primary,
+        borderColor: COLORS.gray2,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignContent: 'center',
         alignItems: 'center',
         paddingLeft: 10,
-        paddingRight: 10
+        paddingRight: 10,
+        height: 50
     },
     searchArea : {
         marginTop: 10,
@@ -62,12 +118,14 @@ const styles = StyleSheet.create({
         height:70,
         justifyContent:"center",
         paddingHorizontal:10,
+        marginVertical: Platform.OS === 'ios' ? 40 : 0
     },
 
     view2 : {
         flexDirection: 'row',
         padding: 15,
         alignItems: 'center',
+        height:70,
     },
 
     icon2 : { 

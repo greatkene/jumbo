@@ -223,7 +223,100 @@ const freeDelivery = [
     }
 ]
 
+const filterData = [
+    {
+        name:"Fast food",
+        image: require('../assets/filters/fastfood.png'), 
+        id:"0"
+    },
+    {
+        name:"Burgers",
+        image:require("../assets/filters/burger.png"),
+        id:"1"
+    },
+    {
+        name:"Salads",
+        image:require("../assets/filters/salads.png"),
+        id:"2"
+    },
+    {
+        name:"Hotdog",
+        image:require("../assets/filters/hotdog.png"),
+        id:"3"
+    },
+    {
+        name:"Chinese",
+        image:require("../assets/filters/chinese.png"),
+        id:"4"
+    },
+    {
+        name:"Mexican",
+        image:require("../assets/filters/mexican.png"),
+        id:"5"
+    },
+    {
+        name:"Sea food",
+        image:require("../assets/filters/seafood.png"),
+        id:"6"
+    },
+]
+
+const filterData2 = [
+    {
+        name:"Fast food",
+        image:'https://bukasapics.s3.us-east-2.amazonaws.com/chicken.png' , 
+        id:"0"
+    },
+    {
+        name:"Burgers",
+        image: 'https://bukasapics.s3.us-east-2.amazonaws.com/macdo.png',
+        id:"1"
+    },
+    {
+        name:"Salads",
+        image:"https://bukasapics.s3.us-east-2.amazonaws.com/nandos.png",
+        id:"2"
+    },
+    {
+        name:"Hotdog",
+        image: "https://bukasapics.s3.us-east-2.amazonaws.com/pizza.png",
+        id:"3"
+    },
+    {
+        name:"Chinese",
+        image:"https://bukasapics.s3.us-east-2.amazonaws.com/pizza6.png",
+        id:"4"
+    },
+    {
+        name:"Mexican",
+        image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate1.png",
+        id:"5"
+    },  
+    {
+        name:"Sea food",
+        image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate2.png",
+        id:"6"
+    },
+    {
+        name:"Chinese Food",
+        image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate3.png",
+        id:"7"
+    },
+    {
+        name:"Mexican pie",
+        image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png",
+        id:"8"
+    },  
+    {
+        name:"Ocean dish",
+        image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png",
+        id:"9"
+    },
+];
+
 export default {
     categories,
-    freeDelivery
+    freeDelivery,
+    filterData,
+    filterData2
 }

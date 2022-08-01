@@ -4,7 +4,7 @@ import SearchComponent from '../components/search/SearchComponent';
 
 function SearchScreen(props) {
     return (
-        <View>
+        <View style={{ backgroundColor: '#fff'}}>
             <SearchComponent />
         </View>
     );
