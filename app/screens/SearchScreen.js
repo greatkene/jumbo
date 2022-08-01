@@ -1,11 +1,12 @@
 import React from 'react';
-import { Text } from 'react-native'
+import { View } from 'react-native'
+import SearchComponent from '../components/search/SearchComponent';
 
 function SearchScreen(props) {
     return (
-        <Text>
-            Search Screen
-        </Text>
+        <View>
+            <SearchComponent />
+        </View>
     );
 }
 
