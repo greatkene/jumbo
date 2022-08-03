@@ -21,11 +21,26 @@ import { COLORS, FONTS, SIZES } from '../../config'
 function SearchComponent(props) {
 
     const navigation  = useNavigation();
+    const filterData = dummyData.filterData
 
-    const [data, setData] =  useState([...dummyData.filterData])
+    const [data, setData] =  useState([...filterData])
     const [modalVisible, setModalVisible] = useState(false)
     const [textInputFocused, setTextInputFocused] = useState(true)
     const textInput = useRef(0)
+
+    const contains = ({name}, query) => {
+        if (name.includes(query)) {
+            return true
+        }
+        return false
+    }
+
+    const handleSearch = text => {
+        const searchData = filter(filterData, userSearch => {
+            return contains(userSearch, text)
+        })
+        setData([...searchData])
+    }
 
 
     return (
@@ -75,8 +90,18 @@ function SearchComponent(props) {
                                 placeholder = ""
                                 autoFocus = {false}
                                 ref = {textInput}
+                                onFocus = {() => {
+                                    setTextInputFocused(true)
+                                }}
+                                onBlur = {() => {
+                                    setTextInputFocused(false)
+                                }}
+                                onChangeText = {handleSearch}
                             />
-                             <Animatable.View>
+                             <Animatable.View
+                                animation = {textInputFocused? "fadeInLeft" : "fadeInRight"}
+                                duration = {400}
+                             >
                                     <Icon 
                                         name= {textInputFocused ? 'cancel' : null}
                                         onPress = {() => {

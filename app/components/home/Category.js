@@ -6,7 +6,17 @@ function Category(props) {
     const [indexCheck, setIndexCheck] = useState("1")
     return (
         <View style={styles.container}>
-            {/* <Text style={{...FONTS.h3}}>Categories</Text> */}
+            <View 
+                style={{
+                    flexDirection: 'row', 
+                    justifyContent: 'space-between',
+                    paddingHorizontal: SIZES.padding
+                }}>
+                <Text style={{...FONTS.h3}}>Categories</Text>
+                <TouchableOpacity>
+                    <Text style={{...FONTS.h3, color: COLORS.primary}}>See All</Text>
+                </TouchableOpacity>
+            </View>
             <View>
                 <FlatList 
                     contentContainerStyle={{paddingLeft: SIZES.padding}}

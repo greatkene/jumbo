@@ -14,16 +14,16 @@ function Address(props) {
                     color={COLORS.primary}
                     size={26}
                 />
-                <Text style={{marginLeft: 5, marginTop: 2, ...FONTS.h3}}>7 Ogoglogona Street</Text>
+                <Text style={{marginLeft: 5, marginTop: 2, ...FONTS.body3}}>7 Ogoglogona Street</Text>
             </View>
-            <View style={styles.iconContainer}>
+            {/* <View style={styles.iconContainer}>
                 <Icon 
                     type='material-community'
                     name='tune'
                     color={COLORS.primary}
                     size={26}
                 />
-            </View>
+            </View> */}
         </View>
     );
 }
