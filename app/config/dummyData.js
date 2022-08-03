@@ -226,17 +226,17 @@ const freeDelivery = [
 const filterData = [
     {
         name:"Fast food",
-        image: require('../assets/filters/fastfood.png'), 
+        image: require("../assets/icons/rice.png"), 
         id:"0"
     },
     {
         name:"Burgers",
-        image:require("../assets/filters/burger.png"),
+        image:require("../assets/icons/burger.png"),
         id:"1"
     },
     {
-        name:"Salads",
-        image:require("../assets/filters/salads.png"),
+        name:"Fruits",
+        image:require("../assets/icons/cherry.png"),
         id:"2"
     },
     {

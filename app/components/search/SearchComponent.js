@@ -14,6 +14,7 @@ import {
 import { Icon } from 'react-native-elements';
 import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native';
+import filter from 'lodash/filter'
 import {dummyData} from '../../config'
 
 import { COLORS, FONTS, SIZES } from '../../config'

@@ -4,6 +4,8 @@ import { COLORS, FONTS, SIZES, dummyData } from '../../config';
 
 function Category(props) {
     const [indexCheck, setIndexCheck] = useState("1")
+    const filterData = dummyData.filterData
+
     return (
         <View style={styles.container}>
             <View 
@@ -20,7 +22,7 @@ function Category(props) {
             <View>
                 <FlatList 
                     contentContainerStyle={{paddingLeft: SIZES.padding}}
-                    data={dummyData.categories}
+                    data={filterData.slice(0,3)}
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
                     keyExtractor={(item) => item.id}
@@ -31,7 +33,7 @@ function Category(props) {
                         >
                             <View style={indexCheck === item.id ? {...styles.categoryContainer} : {...styles.categoryContainerSelected}}>
                                 <View style={styles.categoryDetails}>        
-                                    <Image style={{width:50, height: 50, marginTop:5}} source={item.icon} />
+                                    <Image style={{width:50, height: 50, marginTop:5}} source={item.image} />
                                     <Text style={indexCheck === item.id ? {color:COLORS.white, ...FONTS.h4} : {color:COLORS.black, ...FONTS.h4}}>{item.name}</Text>
                                 </View>
                             </View>
