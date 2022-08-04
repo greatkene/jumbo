@@ -13,17 +13,16 @@ function CategoryCards() {
     const navigation = useNavigation();
 
     return (
-        <View>
+        <View style={{marginBottom: 50}}>
             <FlatList 
-                style={{marginBottom: 1}}
                 data = {filterData2}
                 keyExtractor = {item => item.id}
                 renderItem = {({item, index}) => {
                     return (
                         <TouchableWithoutFeedback
-                            onPress ={()=>{
-                                navigation.navigate("SearchResultScreen",{item:item.name})
-                            }}
+                            // onPress ={()=>{
+                            //     navigation.navigate("SearchResultScreen",{item:item.name})
+                            // }}
                         >
                         <View style= {styles.imageView}>
                             <ImageBackground 
