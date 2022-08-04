@@ -1,10 +1,14 @@
 import React, {useState} from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, FlatList, Pressable, Image } from 'react-native'
 import { COLORS, FONTS, SIZES, dummyData } from '../../config';
+import { useNavigation } from '@react-navigation/native';
+
 
 function Category(props) {
     const [indexCheck, setIndexCheck] = useState("1")
     const filterData = dummyData.filterData
+    const navigation = useNavigation();
+
 
     return (
         <View style={styles.container}>
@@ -15,7 +19,7 @@ function Category(props) {
                     paddingHorizontal: SIZES.padding
                 }}>
                 <Text style={{...FONTS.h3}}>Top Categories</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate("SearchScreen")}>
                     <Text style={{...FONTS.h3, color: COLORS.primary}}>See All</Text>
                 </TouchableOpacity>
             </View>

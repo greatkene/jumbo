@@ -7,6 +7,7 @@ import OnBoardingScreen from '../screens/OnBoardingScreen';
 // import BottomTab from './BottomTab';
 import RestaurantMapScreen from '../screens/RestaurantMapScreen';
 import DrawerNavigator from './DrawerNavigator';
+import SearchScreen from '../screens/SearchScreen';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,7 @@ export default function AuthStack(props) {
             <Stack.Screen name="Register" component={RegisterScreen} />
             <Stack.Screen name="DrawerNavigator" component={DrawerNavigator} />
             <Stack.Screen name="RestaurantMapScreen" component={RestaurantMapScreen} />
+            <Stack.Screen name="SearchScreen" component={SearchScreen} />
         </Stack.Navigator>
     );
 }
