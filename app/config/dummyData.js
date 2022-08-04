@@ -283,10 +283,11 @@ const filterData2 = [
         id:"3"
     },
     {
-        name:"Chinese",
-        image:"https://images.unsplash.com/photo-1606756790138-261d2b21cd75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+        name:"Nigerian Dish",
+        image:"https://i0.wp.com/soupembassy.com.ng/how-to-cook/wp-content/uploads/2019/12/egusi-soup-online.jpg?w=980&ssl=1",
         id:"4"
     },
+
     {
         name:"Mexican",
         image:"https://myfoodbook.com.au/sites/default/files/collections_image/mexican_food_recipes.jpg",
@@ -302,11 +303,13 @@ const filterData2 = [
         image:"https://tastykitchen.com/recipes/wp-content/uploads/sites/2/2014/07/Mexican-Tortilla-Pie-by-Anita-at-Hungry-Couple-on-July-12-2014-410x273.jpg",
         id:"7"
     },
+
     {
-        name:"Nigerian Dish",
-        image:"https://i0.wp.com/soupembassy.com.ng/how-to-cook/wp-content/uploads/2019/12/egusi-soup-online.jpg?w=980&ssl=1",
+        name:"Chinese",
+        image:"https://images.unsplash.com/photo-1606756790138-261d2b21cd75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
         id:"8"
-    },  
+    },
+     
     {
         name:"Small Chops",
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwyAFXuXdLRVL-J56JfkVD0JxbKoK-_a4c63qzdv00ojwvaKlrBYgSO6wUmKg1WAoscuM&usqp=CAU",

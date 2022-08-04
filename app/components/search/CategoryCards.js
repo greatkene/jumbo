@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, FlatList, StyleSheet, Text, TouchableWithoutFeedback, ImageBackground, Dimensions } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 
 import {COLORS, dummyData, FONTS, SIZES} from '../../config'
 
@@ -7,8 +8,9 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 
 
 
-function CategoryCards(props) {
+function CategoryCards() {
     const filterData2 = dummyData.filterData2
+    const navigation = useNavigation();
 
     return (
         <View>
@@ -18,7 +20,11 @@ function CategoryCards(props) {
                 keyExtractor = {item => item.id}
                 renderItem = {({item, index}) => {
                     return (
-                        <TouchableWithoutFeedback>
+                        <TouchableWithoutFeedback
+                            onPress ={()=>{
+                                navigation.navigate("SearchResultScreen",{item:item.name})
+                            }}
+                        >
                         <View style= {styles.imageView}>
                             <ImageBackground 
                                 
@@ -26,7 +32,7 @@ function CategoryCards(props) {
                                 source = {{uri: item.image}}
                             >
                                 <View style={styles.textView}>
-                                    <Text style={{color: COLORS.white, ...FONTS.h2}}> {item.name} </Text>
+                                    <Text style={{color: COLORS.gray3, ...FONTS.h3}}> {item.name} </Text>
                                 </View>
                             </ImageBackground>
                         </View>
@@ -36,10 +42,55 @@ function CategoryCards(props) {
                 horizontal = {false}
                 showsVerticalScrollIndicator = {false}
                 numColumns = {2}
-                ListHeaderComponent = { <Text style={styles.listHeader}>Top Categories</Text> }
+                ListHeaderComponent = { <Text style={styles.listHeader}>More Categories</Text> }
             />
         </View>
     );
+}
+
+export const Footer = ()=>{
+    const filterData2 = dummyData.filterData2
+
+    return(
+        <View style ={{marginTop:20,marginBottom:30 }}>
+
+            <View style ={{}}>
+                <FlatList 
+                    style ={{marginBottom:10}}
+                    data = {filterData2}
+                    keyExtractor ={item=>item.id}
+                    renderItem = {({item,index})=>(
+                        <TouchableWithoutFeedback
+                                onPress ={()=>{
+                                    navigation.navigate("SearchResultScreen",{item:item.name})
+                                }}
+                                >
+                            <View style = {styles.imageView}>
+                              <ImageBackground
+                                    style ={styles.image}
+                                    source = {{uri:item.image}}
+                                >
+                                    
+                                <View style ={styles.textView}>
+                                    <Text style ={{color:COLORS.darkGray}}>{item.name}</Text>
+                                </View>
+                                </ImageBackground>  
+                            </View>
+                        </TouchableWithoutFeedback>
+                    )}
+
+                    horizontal ={false}
+                    showsverticalScrollIndicator = {false}
+                    numColumns ={2}
+                    ListHeaderComponent = { <Text style = {styles.listHeader}>More categories</Text>}
+                  
+                />
+            </View>
+
+
+        </View>
+
+    )
 }
 
 const styles = StyleSheet.create({
@@ -59,10 +110,11 @@ const styles = StyleSheet.create({
         borderRadius:10, 
     }, 
     listHeader : {
-        fontSize:16,
+        ...FONTS.h3,
         color:COLORS.darkGray,
         paddingBottom:10,
-        marginLeft:12
+        marginLeft:12,
+        marginVertical: 15
     },
     textView: {
         height: SCREEN_WIDTH*0.4475,

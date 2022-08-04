@@ -14,7 +14,7 @@ function Category(props) {
                     justifyContent: 'space-between',
                     paddingHorizontal: SIZES.padding
                 }}>
-                <Text style={{...FONTS.h3}}>Categories</Text>
+                <Text style={{...FONTS.h3}}>Top Categories</Text>
                 <TouchableOpacity>
                     <Text style={{...FONTS.h3, color: COLORS.primary}}>See All</Text>
                 </TouchableOpacity>
