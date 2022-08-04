@@ -264,52 +264,52 @@ const filterData = [
 const filterData2 = [
     {
         name:"Fast food",
-        image:'https://bukasapics.s3.us-east-2.amazonaws.com/chicken.png' , 
+        image:'https://thumbs.dreamstime.com/b/roast-chicken-5469759.jpg' , 
         id:"0"
     },
     {
         name:"Burgers",
-        image: 'https://bukasapics.s3.us-east-2.amazonaws.com/macdo.png',
+        image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1299&q=80',
         id:"1"
     },
     {
         name:"Salads",
-        image:"https://bukasapics.s3.us-east-2.amazonaws.com/nandos.png",
+        image:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
         id:"2"
     },
     {
         name:"Hotdog",
-        image: "https://bukasapics.s3.us-east-2.amazonaws.com/pizza.png",
+        image: "https://images.unsplash.com/photo-1621858170710-2cadd3066b3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
         id:"3"
     },
     {
         name:"Chinese",
-        image:"https://bukasapics.s3.us-east-2.amazonaws.com/pizza6.png",
+        image:"https://images.unsplash.com/photo-1606756790138-261d2b21cd75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
         id:"4"
     },
     {
         name:"Mexican",
-        image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate1.png",
+        image:"https://myfoodbook.com.au/sites/default/files/collections_image/mexican_food_recipes.jpg",
         id:"5"
     },  
     {
         name:"Sea food",
-        image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate2.png",
+        image:"https://images.immediate.co.uk/production/volatile/sites/30/2021/07/Roast-seafood-dish-b585388.jpg?resize=960,872?quality=90&webp=true&resize=600,545",
         id:"6"
     },
     {
-        name:"Chinese Food",
-        image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate3.png",
+        name:"Mexican Pie",
+        image:"https://tastykitchen.com/recipes/wp-content/uploads/sites/2/2014/07/Mexican-Tortilla-Pie-by-Anita-at-Hungry-Couple-on-July-12-2014-410x273.jpg",
         id:"7"
     },
     {
-        name:"Mexican pie",
-        image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png",
+        name:"Nigerian Dish",
+        image:"https://i0.wp.com/soupembassy.com.ng/how-to-cook/wp-content/uploads/2019/12/egusi-soup-online.jpg?w=980&ssl=1",
         id:"8"
     },  
     {
-        name:"Ocean dish",
-        image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png",
+        name:"Small Chops",
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwyAFXuXdLRVL-J56JfkVD0JxbKoK-_a4c63qzdv00ojwvaKlrBYgSO6wUmKg1WAoscuM&usqp=CAU",
         id:"9"
     },
 ];
