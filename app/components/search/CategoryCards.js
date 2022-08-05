@@ -13,8 +13,9 @@ function CategoryCards() {
     const navigation = useNavigation();
 
     return (
-        <View style={{marginBottom: 50}}>
+        <View style={{marginBottom: 50, marginTop: 10}}>
             <FlatList 
+                style={{borderRadius: 20}}
                 data = {filterData2}
                 keyExtractor = {item => item.id}
                 renderItem = {({item, index}) => {
