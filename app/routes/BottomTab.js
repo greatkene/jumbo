@@ -37,19 +37,21 @@ function BottomTab(props) {
                 }}
             />
             <BottomTabs.Screen 
-                name="SearchScreen"
-                component={ClientStack}
-                options = {{
-                    tabBarLabel : "Search",
-                    tabBarIcon: ({color}) => (
-                        <Icon
-                            name='search'
-                            type='material'
-                            color={color}
-                            size={28}
-                        />
-                    )
-                }}
+                name ="SearchScreen"
+                component ={ClientStack}
+                options ={
+                    {
+                        tabBarLabel : "Search",
+                        tabBarIcon: ({color,size})=>(
+                            <Icon 
+                                name ='search'
+                                type = 'material'
+                                color ={color}
+                                size ={size}
+                            />
+                        )
+                    }
+                }
             />
             <BottomTabs.Screen 
                 name="Order"

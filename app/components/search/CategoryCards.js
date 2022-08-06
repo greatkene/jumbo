@@ -21,9 +21,9 @@ function CategoryCards() {
                 renderItem = {({item, index}) => {
                     return (
                         <TouchableWithoutFeedback
-                            // onPress ={()=>{
-                            //     navigation.navigate("SearchResultScreen",{item:item.name})
-                            // }}
+                            onPress ={()=>{
+                                navigation.navigate("SearchResultScreen",{item:item.name})
+                            }}
                         >
                         <View style= {styles.imageView}>
                             <ImageBackground 
@@ -48,50 +48,6 @@ function CategoryCards() {
     );
 }
 
-export const Footer = ()=>{
-    const filterData2 = dummyData.filterData2
-
-    return(
-        <View style ={{marginTop:20,marginBottom:30 }}>
-
-            <View style ={{}}>
-                <FlatList 
-                    style ={{marginBottom:10}}
-                    data = {filterData2}
-                    keyExtractor ={item=>item.id}
-                    renderItem = {({item,index})=>(
-                        <TouchableWithoutFeedback
-                                onPress ={()=>{
-                                    navigation.navigate("SearchResultScreen",{item:item.name})
-                                }}
-                                >
-                            <View style = {styles.imageView}>
-                              <ImageBackground
-                                    style ={styles.image}
-                                    source = {{uri:item.image}}
-                                >
-                                    
-                                <View style ={styles.textView}>
-                                    <Text style ={{color:COLORS.darkGray}}>{item.name}</Text>
-                                </View>
-                                </ImageBackground>  
-                            </View>
-                        </TouchableWithoutFeedback>
-                    )}
-
-                    horizontal ={false}
-                    showsverticalScrollIndicator = {false}
-                    numColumns ={2}
-                    ListHeaderComponent = { <Text style = {styles.listHeader}>More categories</Text>}
-                  
-                />
-            </View>
-
-
-        </View>
-
-    )
-}
 
 const styles = StyleSheet.create({
     imageView :{

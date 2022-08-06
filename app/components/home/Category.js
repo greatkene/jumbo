@@ -19,7 +19,7 @@ function Category(props) {
                     paddingHorizontal: SIZES.padding
                 }}>
                 <Text style={{...FONTS.h3}}>Top Categories</Text>
-                <TouchableOpacity onPress={() => navigation.navigate("SearchScreen")}>
+                <TouchableOpacity onPress={() => navigation.navigate("SearchScreens")}>
                     <Text style={{...FONTS.h3, color: COLORS.primary}}>See All</Text>
                 </TouchableOpacity>
             </View>
@@ -33,7 +33,9 @@ function Category(props) {
                     extraData={indexCheck}
                     renderItem={({item, index}) => (
                         <Pressable 
-                            onPress={() => { setIndexCheck(item.id )}}
+                            onPress = {() =>{
+                                setIndexCheck(item.id)
+                            }}
                         >
                             <View style={indexCheck === item.id ? {...styles.categoryContainer} : {...styles.categoryContainerSelected}}>
                                 <View style={styles.categoryDetails}>        
