@@ -9,6 +9,7 @@ import SearchScreen from '../screens/SearchScreen';
 import MyOrdersScreen from '../screens/MyOrdersScreen';
 import MyAccountScreen from '../screens/MyAccountScreen'
 import {COLORS, FONTS}   from '../config';
+import { ClientStack } from './clientStack';
 
 const BottomTabs = createBottomTabNavigator();
 
@@ -36,9 +37,10 @@ function BottomTab(props) {
                 }}
             />
             <BottomTabs.Screen 
-                name="Search"
-                component={SearchScreen}
+                name="SearchScreen"
+                component={ClientStack}
                 options = {{
+                    tabBarLabel : "Search",
                     tabBarIcon: ({color}) => (
                         <Icon
                             name='search'
