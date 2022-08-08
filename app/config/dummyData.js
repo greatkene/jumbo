@@ -317,9 +317,183 @@ const filterData2 = [
     },
 ];
 
+const productData = [
+    {
+        name:"Hand cut chips", 
+        price: 3000,
+        image:"https://media.istockphoto.com/photos/girl-holding-bowl-of-potato-chips-fries-picture-id1164364743?k=20&m=1164364743&s=612x612&w=0&h=2moUEDEUsCZ3iuwWCKWCqLXx9cMR4o-KMaqwrlkBc7A=",
+        details:"Two 100% fresh beef burger patties that are hot,deliciously",
+        id:0
+    },
+    {
+        name:"Big Mac", 
+        price:5000,
+        image:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        details:"McFeast features two 100% fresh beef burger patties that are hot",
+        id:1
+    },
+    {
+        name:"Hand cut chips", 
+        price: 3000,
+        image:"https://media.istockphoto.com/photos/girl-holding-bowl-of-potato-chips-fries-picture-id1164364743?k=20&m=1164364743&s=612x612&w=0&h=2moUEDEUsCZ3iuwWCKWCqLXx9cMR4o-KMaqwrlkBc7A=",
+        details:"Two 100% fresh beef burger patties that are hot,deliciously",
+        id:2
+    },
+    {
+        name:"Big Mac", 
+        price:5000,
+        image:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        details:"McFeast features two 100% fresh beef burger patties that are hot",
+        id:3
+    },
+    {
+        name:"Hand cut chips", 
+        price: 3000,
+        image:"https://media.istockphoto.com/photos/girl-holding-bowl-of-potato-chips-fries-picture-id1164364743?k=20&m=1164364743&s=612x612&w=0&h=2moUEDEUsCZ3iuwWCKWCqLXx9cMR4o-KMaqwrlkBc7A=",
+        details:"Two 100% fresh beef burger patties that are hot,deliciously",
+        id:4
+    },
+    {
+        name:"Big Mac", 
+        price:5000,
+        image:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        details:"McFeast features two 100% fresh beef burger patties that are hot",
+        id:3
+    },
+]
+
+const restaurantData = [
+    {
+        id:0,
+        restaurantName:"Mc Donalds", 
+        farAway:"21.2",
+        businessAddress:"53 Oluwakayode, Hent Estate, Agungi",
+        images:'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/102cf51c-9220-4278-8b63-2b9611ad275e/Derivates/3831dbe2-352e-4409-a2e2-fc87d11cab0a.jpg',
+        averageReview:4.9,
+        numberOfReview:272,
+        coordinates : {lat: -26.1888612, lng: 28.246325} ,
+        discount:10,
+        deliveryTime:15,
+        collectTime:5, 
+        foodType:"Burgers, Wraps,Milkshakes..." ,
+        productData:[
+            {
+                name:"Hand cut chips", 
+                price:2943.30,
+                image:"https://media.istockphoto.com/photos/girl-holding-bowl-of-potato-chips-fries-picture-id1164364743?k=20&m=1164364743&s=612x612&w=0&h=2moUEDEUsCZ3iuwWCKWCqLXx9cMR4o-KMaqwrlkBc7A="
+            },
+            {
+                name:"Big Mac", 
+                price:5320.80,
+                image:"https://metro.co.uk/wp-content/uploads/2021/10/mcdonalds-double-big-mac-c842.jpg?quality=90&strip=all"
+            },
+            {
+                name:"Shawarma",
+                price:1700,
+                image:"https://i.ytimg.com/vi/uYUB5E-13bE/maxresdefault.jpg"
+            },
+        ],
+    },
+    {
+        id:1,
+        restaurantName:"KFC", 
+        farAway:"26.2",
+        businessAddress:"Lekki-Epe Expressway by Chisco",
+        images:'https://victoria.mediaplanet.com/app/uploads/sites/114/2021/06/KFC-chicken-bucket-gravy-576x486.jpg',
+        averageReview:4.4,
+        numberOfReview:212,
+        coordinates : {lat: -26.1888612, lng: 28.246325} ,
+        discount:10,
+        deliveryTime:30,
+        collectTime:5, 
+        foodType:"Chicken,Chicken wings..." ,
+        productData:[
+            {
+                name:"Hand cut chips", 
+                price:2943.30,
+                image:"https://media.istockphoto.com/photos/girl-holding-bowl-of-potato-chips-fries-picture-id1164364743?k=20&m=1164364743&s=612x612&w=0&h=2moUEDEUsCZ3iuwWCKWCqLXx9cMR4o-KMaqwrlkBc7A="
+            },
+            {
+                name:"Chicken Wings", 
+                price:2320.80,
+                image:"https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/2/19/1/FN_Air-Fryer-Chicken-Wings-H_s4x3.jpg.rend.hgtvcom.616.462.suffix/1550611553388.jpeg"
+            },
+            {
+                name:"Fried Chicken",
+                price:1700,
+                image:"https://static.toiimg.com/thumb/54651882.cms?width=1200&height=900"
+            },
+        ],
+    },
+    {
+        id:2,
+        restaurantName:"Chicken Republic", 
+        farAway:"56.2",
+        businessAddress:"Enyo Filling Station Ikota",
+        images:'https://ebonyishops.com/wp-content/uploads/2021/10/ChickenRepublic_RefuelDodoMaxMeal.jpg',
+        averageReview:4.4,
+        numberOfReview:212,
+        coordinates : {lat: -26.1888612, lng: 28.246325} ,
+        discount:10,
+        deliveryTime:30,
+        collectTime:5, 
+        foodType:"Chicken, Rice..." ,
+        productData:[
+            {
+                name:"Chicken Fried Rice", 
+                price:2943.30,
+                image:"https://www.chicken-republic.com/wp-content/uploads/2021/09/ChickenRepublic_RefuelDodoMaxMeal.jpg"
+            },
+            {
+                name:"Chicken Jollof Rice", 
+                price:2320.80,
+                image:"https://www.chicken-republic.com/wp-content/uploads/2021/09/3-REFUEL-SPICY-RICE-MEAL.jpg"
+            },
+            {
+                name:"Fried Chicken",
+                price:1700,
+                image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6fjlP6QdZ6qZXESeyAP697MnMJvr-ntL3DcWIpFuyxHKwaXfMClEVHv-U1EpgwgruF7Q&usqp=CAU"
+            },
+        ],
+    },
+    {
+        id:3,
+        restaurantName:"Ite", 
+        farAway:"20.2",
+        businessAddress:"Lekki Phase 1",
+        images:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH8VJeDahgeGqBWIpSeaoEjVCSL2gLHYrb7_2kghNIT6K4HXgiF8q8siiJKI0GZMb_cL0&usqp=CAU',
+        averageReview:4.4,
+        numberOfReview:212,
+        coordinates : {lat: -26.1888612, lng: 28.246325} ,
+        discount:10,
+        deliveryTime:30,
+        collectTime:5, 
+        foodType:"Swallow, Bush Meat..." ,
+        productData:[
+            {
+                name:"Ofe Onugbu", 
+                price:2943.30,
+                image:"https://dooneyskitchen.com/wp-content/uploads/2021/05/Ofe-Owerri-2.jpg"
+            },
+            {
+                name:"Ofe Oha", 
+                price:2320.80,
+                image:"https://www.fitnigerian.com/wp-content/uploads/2020/10/ofe-oha-soup-recipe.jpg"
+            },
+            {
+                name:"Ofe Egusi",
+                price:1700,
+                image:"https://media.istockphoto.com/photos/egusi-soup-and-pounded-yam-nigerian-cuisine-picture-id498310978?k=20&m=498310978&s=612x612&w=0&h=VMCzlFNM-xiVq85zl3jhPkTNA1Sx7m5gCR9MCYPAikA="
+            },
+        ],
+    },
+]
+
 export default {
     categories,
     freeDelivery,
     filterData,
-    filterData2
+    filterData2,
+    productData,
+    restaurantData
 }
