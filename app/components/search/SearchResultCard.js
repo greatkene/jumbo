@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, TouchableOpacity, ImageBackground, FlatList } f
 import React from 'react'
 import {Icon} from 'react-native-elements'
 import { COLORS, FONTS, SIZES } from '../../config'
-import { dummyData } from '../../config/dummyData'
+import ProductCard from '../ProductCard'
 
 
 const SearchResultCard = ({
@@ -64,7 +64,7 @@ const SearchResultCard = ({
 
         <View style={{marginTop:5, paddingBottom: 20}}>
             <FlatList 
-                style = {{backgroundColor: COLORS.primary}}
+                style = {{backgroundColor: COLORS.gray3}}
                 data = {productData}
                 keyExtractor = {(item, index) => index.toString()}
                 renderItem = {({item, index}) => (
@@ -87,7 +87,7 @@ export default SearchResultCard
 
 const styles = StyleSheet.create({
     view1 : {
-        marginHorizontal:9,
+        marginHorizontal:10,
         borderTopRightRadius:5,
         borderTopLeftRadius:5,
     },

@@ -19,7 +19,7 @@ function Category(props) {
                     paddingHorizontal: SIZES.padding
                 }}>
                 <Text style={{...FONTS.h3}}>Top Categories</Text>
-                <TouchableOpacity onPress={() => navigation.navigate("SearchScreens")}>
+                <TouchableOpacity onPress={() => navigation.navigate("SearchScreen")}>
                     <Text style={{...FONTS.h3, color: COLORS.primary}}>See All</Text>
                 </TouchableOpacity>
             </View>
