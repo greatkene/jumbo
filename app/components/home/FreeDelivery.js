@@ -1,7 +1,8 @@
 import React from 'react';
 import { View , FlatList, Dimensions, Text, TouchableOpacity} from 'react-native'
-import { COLORS, FONTS, SIZES, dummyData } from '../../config';
+import { COLORS, FONTS, SIZES, } from '../../config';
 import HomeCard from './HomeCard';
+import { freeDelivery } from '../../config/dummyData';
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 
@@ -23,7 +24,7 @@ function FreeDelivery() {
             <FlatList 
                 contentContainerStyle={{paddingHorizontal: SIZES.padding }}
                 horizontal={true}
-                data = {dummyData.freeDelivery}
+                data = {freeDelivery}
                 showsHorizontalScrollIndicator={false}
                 keyExtractor={(item) => item.id}
                 renderItem= {({item}) => {

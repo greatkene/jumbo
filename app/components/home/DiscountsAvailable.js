@@ -1,7 +1,9 @@
 import React from 'react';
 import { View , FlatList, Dimensions, Text, TouchableOpacity} from 'react-native'
-import { COLORS, FONTS, SIZES, dummyData } from '../../config';
+import { COLORS, FONTS, SIZES, } from '../../config';
 import HomeDiscountCard from './HomeDiscountCard';
+
+import { freeDelivery } from '../../config/dummyData';
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 
@@ -24,7 +26,7 @@ function DiscountsAvailable() {
             <FlatList 
                 horizontal={true}
                 contentContainerStyle={{paddingHorizontal:20,}}
-                data = {dummyData.freeDelivery}
+                data = {freeDelivery}
                 showsHorizontalScrollIndicator={false}
                 keyExtractor={(item) => item.id}
                 renderItem= {({item}) => {

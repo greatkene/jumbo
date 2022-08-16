@@ -15,14 +15,14 @@ import { Icon } from 'react-native-elements';
 import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native';
 import filter from 'lodash/filter'
-import {dummyData} from '../../config'
+import { filterData } from '../../config/dummyData';
 
 import { COLORS, FONTS, SIZES } from '../../config'
 
 function SearchComponent(props) {
 
     const navigation  = useNavigation();
-    const filterData = dummyData.filterData
+ 
 
     const [data, setData] =  useState([...filterData])
     const [modalVisible, setModalVisible] = useState(false)

@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import RestaurantHeader from '../components/restaurant/RestaurantHeader'
 
 const RestaurantHomeScreen = () => {
   return (
     <View>
-      <Text>RestaurantHomeScreen</Text>
+      <RestaurantHeader />
     </View>
   )
 }

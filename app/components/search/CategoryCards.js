@@ -2,14 +2,15 @@ import React from 'react';
 import { View, FlatList, StyleSheet, Text, TouchableWithoutFeedback, ImageBackground, Dimensions } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 
-import {COLORS, dummyData, FONTS, SIZES} from '../../config'
+import {COLORS, FONTS, SIZES} from '../../config'
+import { filterData2 } from '../../config/dummyData';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 
 
 function CategoryCards() {
-    const filterData2 = dummyData.filterData2
+    
     const navigation = useNavigation();
 
     return (

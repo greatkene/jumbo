@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, Dimensions, FlatList } from 'react-native'
 import SearchResultCard from '../components/search/SearchResultCard';
-import { COLORS, dummyData } from '../config';
+import { COLORS } from '../config';
+import { restaurantData } from '../config/dummyData';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 
 function SearchResultScreen({navigation, route}) {
-    const restaurantData = dummyData.restaurantData
     
     return (
         <View style={styles.container}>

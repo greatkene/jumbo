@@ -1,13 +1,15 @@
 import React from 'react';
 import { View , FlatList, Dimensions, Text, TouchableOpacity} from 'react-native'
-import { COLORS, FONTS, SIZES, dummyData } from '../../config';
+import { COLORS, FONTS, SIZES } from '../../config';
 import HomeCard from './HomeCard';
+
+import { freeDelivery } from '../../config/dummyData';
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 
 
 function RestaurantNearYou() {
-    const freeDelivery = dummyData.freeDelivery;
+    // const freeDelivery = dummyData.freeDelivery;
     return (
         <View>
             <View 

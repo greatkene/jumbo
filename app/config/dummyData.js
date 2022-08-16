@@ -1,4 +1,4 @@
-const categories = [
+export const categories = [
     {
         id: "1",
         name: "Fast Food",
@@ -16,7 +16,7 @@ const categories = [
     }
 ]
 
-const freeDelivery = [
+export const freeDelivery = [
     {
         id: 0,
         restaurantName: "Shop Veggies",
@@ -223,7 +223,7 @@ const freeDelivery = [
     }
 ]
 
-const filterData = [
+export const filterData = [
     {
         name:"Fast food",
         image: require("../assets/icons/rice.png"), 
@@ -261,7 +261,7 @@ const filterData = [
     },
 ]
 
-const filterData2 = [
+export const filterData2 = [
     {
         name:"Fast food",
         image:'https://thumbs.dreamstime.com/b/roast-chicken-5469759.jpg' , 
@@ -317,7 +317,7 @@ const filterData2 = [
     },
 ];
 
-const productData = [
+export const productData = [
     {
         name:"Hand cut chips", 
         price: 3000,
@@ -362,7 +362,7 @@ const productData = [
     },
 ]
 
-const restaurantData = [
+export const restaurantData = [
     {
         id:0,
         restaurantName:"Mc Donalds", 
@@ -489,11 +489,3 @@ const restaurantData = [
     },
 ]
 
-export default {
-    categories,
-    freeDelivery,
-    filterData,
-    filterData2,
-    productData,
-    restaurantData
-}

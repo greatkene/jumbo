@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, FlatList, Pressable, Image } from 'react-native'
-import { COLORS, FONTS, SIZES, dummyData } from '../../config';
+import { COLORS, FONTS, SIZES,  } from '../../config';
 import { useNavigation } from '@react-navigation/native';
+import { filterData } from "../../config/dummyData"
 
 
 function Category(props) {
     const [indexCheck, setIndexCheck] = useState("1")
-    const filterData = dummyData.filterData
+  
     const navigation = useNavigation();
 
 
